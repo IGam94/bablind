@@ -1,5 +1,10 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <md-field>
+      <label>먹고 싶은 메뉴</label>
+      <md-input v-model="initial"></md-input>
+    </md-field>
+
+    <md-button class="md-raised md-primary">먹자!</md-button>
   </div>
 </template>
