@@ -1,0 +1,230 @@
+@keyframes diceFront {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  20% {
+    transform: translateZ(-100px) rotateX(180deg) rotateY(180deg);
+  }
+  40% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+  60% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+  80% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes diceRight {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  20% {
+    transform: translateZ(-100px) rotateX(180deg) rotateY(180deg);
+  }
+  40% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+  60% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(270deg);
+  }
+  80% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(270deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(270deg);
+  }
+}
+@keyframes diceBack {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  20% {
+    transform: translateZ(-100px) rotateX(180deg) rotateY(180deg);
+  }
+  40% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+  60% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(180deg);
+  }
+  80% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(180deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(180deg);
+  }
+}
+@keyframes diceLeft {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  20% {
+    transform: translateZ(-100px) rotateX(180deg) rotateY(180deg);
+  }
+  40% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+  60% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(450deg);
+  }
+  80% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(450deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(450deg);
+  }
+}
+@keyframes diceTop {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  20% {
+    transform: translateZ(-100px) rotateX(180deg) rotateY(180deg);
+  }
+  40% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+  60% {
+    transform: translateZ(-100px) rotateX(270deg) rotateY(360deg);
+  }
+  80% {
+    transform: translateZ(-100px) rotateX(270deg) rotateY(360deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(270deg) rotateY(360deg);
+  }
+}
+@keyframes diceBottom {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  20% {
+    transform: translateZ(-100px) rotateX(180deg) rotateY(180deg);
+  }
+  40% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+  60% {
+    transform: translateZ(-100px) rotateX(450deg) rotateY(360deg);
+  }
+  80% {
+    transform: translateZ(-100px) rotateX(450deg) rotateY(360deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(450deg) rotateY(360deg);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #222;
+}
+
+.scene {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  perspective: 400px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+}
+
+.cube.show-front {
+  animation: diceFront 3s both linear;
+}
+.cube.show-right {
+  animation: diceRight 3s both linear;
+}
+.cube.show-back {
+  animation: diceBack 3s both linear;
+}
+.cube.show-left {
+  animation: diceLeft 3s both linear;
+}
+.cube.show-top {
+  animation: diceTop 3s both linear;
+}
+.cube.show-bottom {
+  animation: diceBottom 3s both linear;
+}
+
+.radio-group {
+  display: none;
+}
+
+.cube__face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 3px solid black;
+  line-height: 200px;
+  font-size: 50px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+}
+.dice {
+  display: block;
+  padding: 10px 30px;
+  margin: 80px auto;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.cube__face--front {
+  background: #fff;
+}
+.cube__face--right {
+  background: #fff;
+}
+.cube__face--back {
+  background: #fff;
+}
+.cube__face--left {
+  background: #fff;
+}
+.cube__face--top {
+  background: #fff;
+}
+.cube__face--bottom {
+  background: #fff;
+}
+
+.cube__face--front {
+  transform: rotateY(0deg) translateZ(100px);
+}
+.cube__face--right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.cube__face--back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.cube__face--left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.cube__face--top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.cube__face--bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+label {
+  margin-right: 10px;
+}
