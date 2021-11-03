@@ -2,7 +2,7 @@
   <div>
     <div id="pan">
       <div id="pin"></div>
-      <canvas id="canvas" width="1000px" height=""></canvas>
+      <!-- <canvas id="canvas" width="1000px" height=""></canvas> -->
     </div>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
 <style lang="css">
 #pan {
   width: 1000px;
-  height: ;
+  height: 0;
   overflow: hidden;
   position: relative;
 }

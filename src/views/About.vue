@@ -38,7 +38,7 @@
 export default {
   data() {
     return {
-      food: ["곱창", "족발", "김밥", "피자", "치킨", "커피"],
+      food: ["이주상", "서주이", "조유진", "유순조", "윤성희", "김보경"],
       cube: "",
       radioGroup: "",
       currentClass: "",
